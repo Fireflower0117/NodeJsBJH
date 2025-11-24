@@ -1,0 +1,41 @@
+1) https://developer.x.com/en (로그인필요 , 회원가입해야함)
+2) 회원가입후 MainDashBoard 제일 좌측 Free 밑에 "get started" 버튼 클릭
+3) Ready to build on X? 페이지 아래쪽에  "Sign up for Free Account" 링크 클릭
+4) textarea영역에 사용목적을 입력해야함
+  "사내 프로젝트 개인 학습용  Node.js 프로젝트 연습중
+  X API 개발 테스트용도로 사용하려고 합니다." * 5  (250byte이상입력해야함)
+
+  같이 개발테스트 용도로 사용한다는 메세지 입력..
+  아래쪽 체크박스 3개 전부 섵택 (checked)
+      You understand
+      You understand your Developer account
+      You accept the Terms & Conditions
+  "submit" 버튼 클릭
+
+5) 잠시있으면 개발자 포털 dashboard 페이지가 열림
+   좌측메뉴에 DefaultProject 아래 프로젝트가 자동으로 생겨있을것임 (번호형식)
+   없으면 create new project로  "my테스트개발도구" 같은 간략한 이름으로 프로젝트 생성
+
+6) 좌측메뉴에 DefaultProject 아래 생성된 프로젝트 클릭
+   페이지 중간에 "keys and tokens" 링크 클릭
+
+7) 페이지 중간에 Access Token and Secret  영역의 "Generate" 버튼 클릭
+
+8)  생성된 Token 저장필수 , 잃어버리지 않는 경로에 파일로 저장해둘것.
+
+     Accses Token
+     1992899163856818176-YgXnBCCIfx2ABDfATjM6LKreOrUSsD
+
+     Access Token Secret
+     2iUdr6XqtWXjGgugJIDw0dNM8CosVNZsGnvVs4kb5r4eK
+
+     복사(저장)이 끝났으면 "Yes, I saved them" 버튼 클릭
+
+8)  Bearer Token도 발급 ("Generate" 버튼 클릭)
+    마찬가지로 파일로 저장 필수
+
+    Bearer Token
+    AAAAAAAAAAAAAAAAAAAAAL1p5gEAAAAAC1q3l8EhS%2B3%2BbvrcRv%2BjTYP5Eos%3DOaP7U737ILlJBndkKz0ir3G5JzDRTu7jZHLkFfk73EJx47E6St
+
+
+

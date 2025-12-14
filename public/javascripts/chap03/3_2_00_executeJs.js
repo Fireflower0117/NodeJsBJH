@@ -17,7 +17,7 @@ helloWorld();
 * 만약 인텔리J를 사용한다면 여기파일에서 선택+ 우클릭 > 경로/참조복사 를 선택
 * 절대경로를 선택후 메모장에 붙여넣기를 해보면 이파일의 경로를 알수있다.
 * 인텔리J 터미털에서 현재파일의 경로로 이동후
- {projectHome}\public\javascript\chap03>node 3_2_01_executeJs.js
+ {projectHome}\public\javascript\chap03>node 3_2_00_executeJs.js
 * 실행해본다. 실행결과가 아래로 나오면 정상 동작 한것이다.
   Hello World OpenNote
   Hello Node OpenNote

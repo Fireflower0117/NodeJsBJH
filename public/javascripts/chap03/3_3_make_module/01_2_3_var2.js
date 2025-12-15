@@ -10,5 +10,5 @@ exports.even = '짝수입니다.';
 *
 *          Spring F/W에서 사용하는 interface 클래스에 public static final 같은 형식으로 사용하면 편리할듯....
 *
-*    3_3_01_3_this.js 보기
+*    01_3_this.js 보기
 * */

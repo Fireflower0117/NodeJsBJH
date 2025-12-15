@@ -1,6 +1,6 @@
 const a = false;
 if(a){
-    require('./3_3_01_2_4_func');
+    require('./01_2_4_func');
 }
 console.log('성공');
 

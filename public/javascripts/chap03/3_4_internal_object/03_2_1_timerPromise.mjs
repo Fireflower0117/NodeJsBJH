@@ -13,7 +13,7 @@ for await (const startTime of setInterval(1000, Date.now())){
 }
 
 /**
- * {projecthome}\public\javascripts\chap03> node .\3_4_03_2_1_timerPromise.mjs
+ * {projecthome}\public\javascripts\chap03> node .\03_2_1_timerPromise.mjs
  * 3초후 실행
  * 1초마다 실행 2025-12-14T10:57:10.175Z
  * 1초마다 실행 2025-12-14T10:57:10.175Z

@@ -1,5 +1,5 @@
-const dept1 = require('./3_3_01_5_1_dept1');
-const dept2 = require('./3_3_01_5_2_dept2');
+const dept1 = require('./01_5_1_dept1');
+const dept2 = require('./01_5_2_dept2');
 dept1();
 dept2();
 

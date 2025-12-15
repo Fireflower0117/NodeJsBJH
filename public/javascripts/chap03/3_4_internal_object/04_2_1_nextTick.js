@@ -15,7 +15,7 @@ setTimeout(() => {
 Promise.resolve().then( () => { console.log('promise'); });
 
 /*
-{projecthome}\public\javascripts\chap03>node .\3_4_04_2_1_nextTick.js
+{projecthome}\public\javascripts\chap03>node .\04_2_1_nextTick.js
 nextTick
 promise
 timeOut

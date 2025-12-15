@@ -1,8 +1,8 @@
 const a = true;
 if(a){
-    const m1 = await import('./3_3_02_1_2_func.mjs');
+    const m1 = await import('./02_1_2_func.mjs');
     console.log(m1);
-    const m2 = await import('./3_3_02_1_1_var.mjs');
+    const m2 = await import('./02_1_1_var.mjs');
     console.log(m2);
 }
 /*

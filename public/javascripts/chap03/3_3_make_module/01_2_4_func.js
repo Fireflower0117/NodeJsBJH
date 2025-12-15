@@ -1,5 +1,5 @@
 // 3_3_02_1_var.js파일의 odd, even변수 참조 파일 , require내부 확장자(.js)는 생략가능
-const {odd , even} = require('./3_3_01_2_3_var2');
+const {odd , even} = require('./01_2_3_var2');
 // 구조,분해,할당 문법을 활용
 // 구조,분해,할당을 모르겠으면 https://ko.javascript.info/destructuring-assignment 다시보기 (객체 분해하기)
 

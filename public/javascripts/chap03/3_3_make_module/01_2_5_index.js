@@ -1,5 +1,5 @@
-const {odd, even} = require('./3_3_01_2_3_var2');
-const checkNumber = require('./3_3_01_2_4_func');
+const {odd, even} = require('./01_2_3_var2');
+const checkNumber = require('./01_2_4_func');
 
 function checkStringOddOrEven(str){
     if(str.length % 2){ // 홀수이면...
@@ -11,7 +11,7 @@ function checkStringOddOrEven(str){
     return even; // /3_3_02_1_var.js에서 export한 even변수
 }
 
-console.log('checkNumber(10) : ', checkNumber(10)); // 3_3_01_2_4_func.js export모듈 활용
+console.log('checkNumber(10) : ', checkNumber(10)); // 01_2_4_func.js export모듈 활용
 console.log('checkStringOddOrEven(hello) : ', checkStringOddOrEven('hello')); // 여기파일에서 선언한 함수활용
 
 
@@ -23,7 +23,7 @@ console.log('checkStringOddOrEven(hello) : ', checkStringOddOrEven('hello')); //
 
 // 프로젝트를 수행하다보면 모듈이 많아지고 , 모듈간의 관계가 강력해지면(Tight Coupling) 구조를 파악하기 어렵다는 단점도 존재함
 // 지금까지는 모듈을 만들떄 module.exports를 사용햇는데 module객체말고 exports객체만으로도 모듈을 만들수있음
-// 3_3_01_2_3_var2.js 파일참고
+// 01_2_3_var2.js 파일참고
 // func.js , index.js에서 require('./3_3_02_1_var2')로 변경후 재실행해볼것
 // {projectHome}\public\javascripts\chap03> node 3_3_02_1_index
 // checkNumber(10) : 짝수입니다.

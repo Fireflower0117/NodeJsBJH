@@ -1,4 +1,4 @@
-import {odd, even} from './3_3_02_1_1_var.mjs';
+import {odd, even} from './02_1_1_var.mjs';
 
 function checkOddOrEven(num){
     if(num % 2){

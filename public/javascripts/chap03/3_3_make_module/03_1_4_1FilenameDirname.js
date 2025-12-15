@@ -5,7 +5,7 @@
 console.log('__filename : ', __filename);
 console.log('__dirname : ', __dirname);
 /*
-* __filename : {projecthome}\public\javascripts\chap03\3_3_03_1_4_1FilenameDirname.js
+* __filename : {projecthome}\public\javascripts\chap03\03_1_4_1FilenameDirname.js
   __dirname : {projecthome}\public\javascripts\chap03
 
   경로정보는 학습 환경마다 다르다.

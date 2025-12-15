@@ -24,7 +24,7 @@ console.log('메모리 정보 -----------------------------------------------')
 console.log('os.freemem()  : ', os.freemem()); // 사용가능한 메모리(RAM)
 console.log('os.totalmem() : ', os.totalmem()); // 전체 메모리 용량 (RAM)
 
-/* {projecthome}\public\javascripts\chap03>node 3_5_01_1_1_os.js
+/* {projecthome}\public\javascripts\chap03>node 1_1_os.js
 
 예제에는 없지만 os.constants라는 객체가 있다. 그안에는 각종 에러와 신호에 대한 정보가 담겨있다. 
 에러가 발생했을떄 EADDRINUSE나 ECONNRESET같은 에러코드를 함께 보여주며 이런 코드들이 

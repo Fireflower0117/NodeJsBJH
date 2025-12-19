@@ -1,0 +1,57 @@
+자주 발생하는 에러들
+
+node : command not found
+       노드를 설치했지만 이 에러가 발생하는 이유는 환경변수가 제대로 설정되지 않은 것입니다.
+
+ReferenceError : 모듈 is not defined
+       모듈을 require했는지 확인합니다.
+
+Error: Cannot find module 모듈명
+       해당모듈을 require했지만 설지하지 않았습니다.  npm i 명령어로 설치해야 합니다.
+
+Error [ERR_MODULE_NOT_FOUND]
+       존재하지 않는 모듈을 불러올때 발생합니다.
+
+Error : Can't set headers after they are sent
+       요청에대한 응답을 보낼때 응답을 두번이상 보내면 발생하는 에러 입니다.
+       요청에 대한 응답은 한번만 보내야 하며, 등답메서드를 두번 실핼하지 않은지 확인 해야 합니다.
+
+FATAL ERROR: CALL_AND_RETRY_LAST Allocation failed - JavaScript heap out of memory
+       코드를 실행할떄 메모리가 부족해서 스크립트가 정상적으로 동작하지 않은 경우입니다.
+       코드가 잘못돼었을 확율이 높으므로 코드를 점검해봐야 합니다.
+       메모리가 정말 부족한 경우라면 노드 메모리를 늘릴수있습니다.
+       node --max-old-space-size=4096
+       4096은 4Gb를 의미합니다. 원하는 용량을 설정하면 됩니다.
+
+UnhandledPromiseRejectionWarning : Unhandled promise rejection
+       프로미스 사용시 catch를 붙이지 않으면 발생합니다.
+       항상 catch를 붙여 에러가 발생하는상황에 대비해야 합니다.
+
+EADDRINUSE 포트 번호
+       해당 포트번호를 이미 다른프로세스가 연결해서 사용중일때 발생하는 에러입니다.
+       노드프로세스일수도있고 다른 프로세스일수도있습니다.
+       프로세스를 죽이거나, 다른 포트를 사용해야 합니다.
+
+EACCES 또는 EPERM
+       노드가 작업을 수행하는데 권한이 불충분할때 발행사는 에러 입니다.
+       파일/폴더의 수정,삭제,생성 권한을 확인해봐야 합니다.
+
+EJSONPARSE
+       package.json등의 JSON파일의 문법에 오류가있을떄 발생합니다.
+       java스크립트의 객체와는 형식이 조금 다르니, 쉼표같은게 빠지거나 추가됐는지 호가인 해야 합니다
+
+ECONNREFUSED
+       요청을 보냈으나 연결이 성립되지 않았을떄 발생하는 에러입니다.
+       요청서버의 주소가 올바른지, 요청서버가 정상적으로 서비스 중인지 확인해야 합니다.
+
+ETARGET
+       package.json에 기록한 패키지의 버전이 존재하지 않을떄 발생하는 에러 입니다.
+       해당버전이 있는지 확인해 봐야 합니다.
+
+ETIMEOUT
+       요청을 보냈으니 응답시간 내에 오지 않을때 발생합니다.
+       요청받는 서버의 상태를 점검 해야 합니다.
+
+ENOENT : no such file of directory
+       지정한 폴더나 파일이 존재하지 않는경우 발생합니다.
+       Mac이나 Linux운영체제에서는 영문 대소문자를 구분하므로 잘확인해야 합니다.

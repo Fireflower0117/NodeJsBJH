@@ -41,6 +41,7 @@ async function getUser(){
                 }
             });
             userDiv.appendChild(span);
+            userDiv.appendChild(edit);
             userDiv.appendChild(remove);
             list.appendChild(userDiv);
             console.log(res.data);
@@ -62,7 +63,7 @@ document.getElementById('form').addEventListener('submit', async (e) => {
    }
 
    try{
-       await axios.port('/user', {name});
+       await axios.post('/user', {name});
        getUser();
    }
    catch(err){

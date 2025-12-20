@@ -19,7 +19,6 @@ http.createServer(async (req, res) => {
                 return res.end(data);
             }
             else if(req.url === '/users'){
-                const data = await fs.readFile(path.join(__dirname, '0_1_1_about.html'));
                 res.writeHead(200 , {'Content-Type' : 'text/html; charset=utf-8'});
                 return res.end(JSON.stringify(users));
             }
@@ -55,7 +54,7 @@ http.createServer(async (req, res) => {
             }
         }
         else if(req.method === 'PUT'){
-            if(req.url.startsWith('/users/')){
+            if(req.url.startsWith('/user/')){
                 const key = req.url.split('/')[2];
                 let body = '';
                 req.on('data', (data) => {
@@ -70,14 +69,14 @@ http.createServer(async (req, res) => {
                     res.end(JSON.stringify(users));
                 });
             }
-            else if(req.method === 'DELTE'){
-                if(req.url.startsWith('/users/')){
-                    const key = req.url.split('/')[2];
-                    delete users[key];
+        }
+        else if(req.method === 'DELETE'){
+            if(req.url.startsWith('/user/')){
+                const key = req.url.split('/')[2];
+                delete users[key];
 
-                    res.writeHead(200 , {'Content-Type' : 'text/json; charset=utf-8'});
-                    res.end(JSON.stringify(users));
-                }
+                res.writeHead(200 , {'Content-Type' : 'application/json; charset=utf-8'});
+                return res.end(JSON.stringify(users));
             }
         }
         res.writeHead(404);

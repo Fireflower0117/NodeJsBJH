@@ -1,0 +1,61 @@
+===========================================================================
+====================      Mk Cert 인증서 발급 방법      ======================
+===========================================================================
+1) https://github.com/FiloSottile/mkcert/releases 접속
+   mkcert-vX.X.X-windows-amd64.exe 다운로드
+   (window는 대부분 amd계열이지만 확인필요)
+   확인방법 키보드에서  win + I   > 시스템 > 정보 > 장치정보 > 시스템 종류
+   64비트 운영 체제, x64 기반 프로세서 => AMD
+   64비트 운영 체제, ARM 기반 프로세서 => ARM
+
+2) 다운로드 받은 파일의 경로에서서 파일명 변경
+   2.1)파일이동 ( 다운로드\mkcert-v1.4.4-windows-amd64.exe => D:\RuntimeConfig\mkcert\mkcert-v1.4.4-windows-amd64.exe )
+   2.2)파일명 변경 (파일병을 mkcert.exe로 변경)
+                 AS-IS : D:\RuntimeConfig\mkcert\mkcert-v1.4.4-windows-amd64.exe
+                 TO-BE : D:\RuntimeConfig\mkcert\mkcert.exe
+
+3) 시스템 변수 등록
+   3.1) win + r > SystemPropertiesAdvanced  (엔터)
+   3.2) "환경변수" 버튼 클릭
+   3.3) 시스템 변수 영역 > Path행 선택 > "편집" 버튼 클릭
+   3.4) 변수값 제일우측에 문자열 추가  (기존 Path경로 + ;D:\RuntimeConfig\mkcert 추가)
+        2.2)의 TO-BE 에서 지정한 mkcert.exe파일의 경로
+        ex)  AS-IS : %JAVA_HOME%\bin;%SystemRoot%\system32;
+             TO-BE : %JAVA_HOME%\bin;%SystemRoot%\system32;D:\RuntimeConfig\mkcert
+   3.5) 환경변수 팝업 "확인" 버튼 클릭 > 시스템 속성창 "확인" 버튼 클릭
+
+4) cmd 실행
+   4.1) Win + r > cmd (관리자권한)
+   4.2) C:\Users\PC>mkcert -install
+        인증기관 인증서발급 확인 팝업창 > "확인" 버튼 클릭
+
+        Created a new local CA
+        The local CA is now installed in the system trust store!
+        The local CA is now installed in Java's trust store!
+
+5) Project 인증서 발급
+   5.1) Win + r > cmd (관리자권한) > ProjectHome 이동
+        ex) D:\JetBrains\workspace-egov\NodeJsBookStudy == {ProjectHome} 이라면...
+            D:\JetBrains\workspace-egov\NodeJsBookStudy\public\javascripts\chap04\4_4_http_http2 경로까지 이동
+   5.2) D:\JetBrains\workspace-egov\NodeJsBookStudy\public\javascripts\chap04\4_4_http_http2>mkcert localhost 127.0.0.1 ::1
+
+        Created a new certificate valid for the following names 📜
+          - "localhost"
+          - "127.0.0.1"
+          - "::1"
+
+         The certificate is at "./localhost+2.pem" and the key at "./localhost+2-key.pem"
+
+         It will expire on 24 March 2028
+
+   5.3) 인증서 발급확인
+      D:\JetBrains\workspace-egov\NodeJsBookStudy\public\javascripts\chap04\4_4_http_http2 경로에
+      localhost+2.pem , locahost+2-key.pem 파일 생성 확인
+
+      ex) D:\JetBrains\workspace-egov\NodeJsBookStudy\public\javascripts\chap04\4_4_http_http2/
+                                                                                 ├─ 1_1_1_server.js
+                                                                                 ├─ localhost.pem
+                                                                                 └─ localhost-key.pem
+
+6) SSL 서버 실행
+   node>1_1_2_sslServer.js
